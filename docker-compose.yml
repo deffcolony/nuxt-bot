@@ -1,0 +1,14 @@
+services:
+  discord-bot-prod:
+    container_name: discord_bot_prod
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - .env
+    environment:
+      TZ: Europe/Amsterdam
+      NODE_ENV: production
