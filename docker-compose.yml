@@ -1,6 +1,6 @@
 services:
-  discord-bot-prod:
-    container_name: discord_bot_prod
+  discord-nuxt-bot-prod:
+    container_name: discord_nuxt_bot_prod
     restart: unless-stopped
     build:
       context: .
